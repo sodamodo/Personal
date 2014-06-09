@@ -84,13 +84,10 @@ STATIC_URL = '/static/'
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'templates').replace('\\','/'),
+PROJECT_DIR = os.path.dirname(__file__)
 
-    os.path.join(PROJECT_ROOT, "templates"),
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_DIR, '../templates'),
 )
 
 # List of callables that know how to import templates from various sources.
