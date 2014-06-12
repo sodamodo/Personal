@@ -10,6 +10,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os import path
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -83,8 +85,22 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+PROJECT_DIR = os.path.dirname(__file__)
+
+
+STATIC_ROOT = 'C:/Users/znoah/Documents/GitHub/Personal/life/static'
+
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+
+
+)
 
 PROJECT_DIR = os.path.dirname(__file__)
+MEDIA_ROOT = path.join(PROJECT_DIR, 'media')
+MEDIA_URL = "/media/"
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, '../templates'),
